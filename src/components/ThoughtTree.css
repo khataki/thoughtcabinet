@@ -1,0 +1,36 @@
+/* src/components/ThoughtTree.css */
+.thought-tree {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+  overflow: scroll;
+  height: 80vh;
+  padding: 35px;
+}
+
+.thought-node.problem {
+  opacity: 0.5;
+}
+
+.thought-node.solution {
+  opacity: 1;
+}
+
+.connection-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.connection-line {
+  stroke: #888;
+  stroke-width: 2;
+}

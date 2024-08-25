@@ -1,0 +1,76 @@
+/* src/components/ThoughtNode.css */
+.thought-node-container {
+  position: relative;
+  margin: 20px; /* Увеличиваем отступы, чтобы текст не наезжал на другие элементы */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thought-node {
+  width: 100px;
+  height: 100px;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  transform: rotate(45deg); /* Поворачиваем квадрат, чтобы получить ромб */
+  border: 5px double white;
+}
+
+.thought-node img {
+  transform: rotate(-45deg); /* Поворачиваем изображение обратно */
+  object-fit: cover;
+  width: 150%;
+  height: 150%;
+  transition: filter 0.3s ease;
+}
+
+.thought-node:hover {
+  transform: rotate(45deg) scale(1.1); /* Увеличиваем масштаб ноды при наведении */
+}
+
+.thought-node:hover img {
+  filter: brightness(1.6); /* Увеличиваем яркость изображения при наведении */
+}
+
+.thought-node.problem {
+  opacity: 0.5;
+  border: none;
+  outline: 2.5px solid white;
+}
+
+.thought-node.solution {
+  opacity: 1;
+}
+
+.thought-title {
+  min-width: 150px;
+  padding: 5px 10px;
+  position: absolute; 
+  bottom: -25px;
+  font-size: 14px;
+  font-weight: 800;
+  background: linear-gradient(to right, rgba(255, 140, 0, 1), rgba(255, 140, 0, 1)); /* Градиент от прозрачного к темно-оранжевому */
+  background-size: 200% 100%; /* Увеличиваем размер фона для анимации */
+  background-position: 100% 0; /* Начинаем с полной прозрачности */
+  color: #fff;
+  text-align: center;
+  transition: background-position 0.3s ease; /* Анимация заполнения заголовка цветом */
+  transform: none; /* Убираем вращение текста */
+  text-transform: uppercase;
+}
+
+.thought-node:hover .thought-title {
+  background-position: 0 0;
+  scale: 1.5; /* Заполняем заголовок цветом слева направо при наведении */
+}
+
+/* Повышаем специфичность стиля для проблемных нод */
+.thought-node.problem .thought-title {
+  background: #fff !important;
+  color: black !important;
+}

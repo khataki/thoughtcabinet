@@ -1,0 +1,78 @@
+/* src/components/ThoughtDetails.css */
+.thought-details {
+  color: #ecf0f1;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thought-image {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  color: #ecf0f1;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.tabs button.active {
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.thought-content {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  width: 100%;
+  text-align: center;
+}
+
+.thought-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.forget-button, .edit-button, .solution-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.edit-button {
+  background-color: #4a90e2;
+}
+
+.forget-button:hover {
+  background-color: #c0392b;
+}
+
+.edit-button:hover {
+  background-color: #357ab8;
+}
+
+.solution-button {
+  background-color: forestgreen;
+}

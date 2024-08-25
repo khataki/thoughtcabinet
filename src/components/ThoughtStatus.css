@@ -1,0 +1,27 @@
+/* src/components/ThoughtStatus.css */
+.thought-status {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .status-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+  }
+  
+  .status-button.problem {
+    color: #e74c3c;
+  }
+  
+  .status-button.solution {
+    color: #2ecc71;
+  }
+  
+  .status-button svg {
+    margin-right: 5px;
+  }

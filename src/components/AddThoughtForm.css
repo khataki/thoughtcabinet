@@ -1,0 +1,67 @@
+/* src/components/AddThoughtForm.css */
+.add-thought-form {
+    padding: 10px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    color: #bbb;
+  }
+  
+  button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #357ab8;
+  }
+  
+  .tags {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .tag {
+    background-color: #444;
+    color: #fff;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .tag button {
+    background-color: transparent;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    margin-left: 5px;
+  }
